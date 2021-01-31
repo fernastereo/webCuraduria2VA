@@ -1,0 +1,22 @@
+﻿/*Tecnica para limpiar elementos flotantes*/
+.limpiar:after
+{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.limpiar
+{
+    display:inline-block;
+}
+.limpiar
+{
+    display:block;
+}
+* html .limpiar
+{
+    height:1px;
+}
+/*Fin Tecnica para limpiar elementos flotantes*/
