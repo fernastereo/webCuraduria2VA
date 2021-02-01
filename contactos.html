@@ -4,6 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Curaduria Urbana No. 2 de Valledupar</title>
 <link rel="stylesheet" type="text/css" href="demoStyleSheet.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="./js/mail.js"></script>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="fadeSlideShow.js"></script>
 <!--<script type="text/javascript">
@@ -61,7 +64,7 @@ body {
 	position:absolute;
 	width:100%;
 	height:35px;
-	top:806px;
+	top:1050px;
 	left:0px;
 	font-family:Tahoma, Geneva, sans-serif;
 	font-size:11px;
@@ -70,10 +73,13 @@ body {
 #principal {
 	position:absolute;
 	width:100%;
-	height:300px;
+	height:570px;
 	left:0px;
 	top:495px;
 	background-color:#FFF;
+}
+.visible{
+    display: inline;
 }
 .class1 A:link {text-decoration: none; color: #007912;}
 .class1 A:visited {text-decoration: none; color:#007912;}
@@ -127,29 +133,44 @@ body {
     <td width="430"><img src="images/tit-contactos.jpg" width="750" height="64" /></td>
     </tr>
   <tr>
-    <td><form id="form1" name="form1" method="post" action="enviar.php">
-      <table width="527" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC" style="font-family:Tahoma, Geneva, sans-serif; font-size:14px">
-        <tr>
-          <td width="139" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;NOMBRE</td>
-          <td width="385"><input name="nombre" type="text" id="textfield" size="58" /></td>
-        </tr>
-        <tr>
-          <td bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;EMAIL</td>
-          <td><input name="correo" type="text" id="textfield2" size="58" /></td>
-        </tr>
-        <tr>
-          <td bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;ASUNTO</td>
-          <td><input name="asunto" type="text" id="textfield3" size="58" /></td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#FFFFFF">&nbsp;&nbsp;&nbsp;MENSAJE</td>
-          <td><textarea name="mensaje" id="textarea" cols="59" rows="5"></textarea></td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center" bgcolor="#FFFFFF"><input type="submit" name="button" id="button" value="Enviar" /></td>
-        </tr>
-      </table>
-    </form></td>
+    <td>
+      <form>
+        <div class="row g-3 mt-3 mb-3">
+          <div class="col">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" id="nombre" class="form-control form-control-sm">
+            <div class="invalid-feedback">
+              Por favor escriba su nombre.
+            </div>
+          </div>
+          <div class="col">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" id="email" class="form-control form-control-sm">
+            <div class="invalid-feedback">
+              Por favor escriba su correo electrónico.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="asunto" class="form-label">Asunto</label>
+          <input type="text" id="asunto" class="form-control form-control-sm">
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea id="mensaje" class="form-control form-control-sm" rows="4"></textarea>
+          <div class="invalid-feedback">
+            Por favor escriba un mensaje a enviar.
+          </div>
+        </div>
+        <button
+          id="button_enviar"
+          class="btn btn-outline-success btn-sm"
+          onclick="sendEmail(); return false;"
+        >
+          Enviar Mensaje
+        </button>
+      </form>
+    </td>
     </tr>
 </table>
 </div>
@@ -162,5 +183,7 @@ body {
     </tr>
   </table>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </body>
 </html>
