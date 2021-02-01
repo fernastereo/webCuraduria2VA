@@ -110,6 +110,9 @@ body {
 .archivo{
     margin-top: 10px;
 }
+.visible{
+    display: inline;
+}
 </style>
 </head>
 <body>
@@ -159,11 +162,14 @@ body {
             <p>
               Ejemplo para realizar su búsqueda: Si su numero de resolución es 20001-2-<span style="color: blue; font-weight: bold;">18</span>-<span style="color: Red; font-weight: bold;">0076</span>, en vigencia escoja <span style="color: blue; font-weight: bold;">2018</span> y en número de reolución escriba los 4 últimos digitos <span style="color: Red; font-weight: bold;">(0076)</span>.
             </p><br />
-            <form class="row">
+            <form class="row needs-validation">
                 <div class="row">
                     <div class="col-sm-3">
                         <label for="resolucion" class="form-label col-form-label-sm">Resolución</label>
                         <input type="text" class="form-control form-control-sm" id="resolucion">
+                        <div class="invalid-feedback">
+                            Por favor escriba un número de Resolución.
+                        </div>
                     </div>
                     <div class="col-sm-3">
                         <label for="vigencia" class="form-label col-form-label-sm">Vigencia</label>
@@ -196,13 +202,20 @@ body {
     const button = document.querySelector('#consultar');
     const resolucion = document.querySelector('#resolucion');
     const vigencia = document.querySelector('#vigencia');
-    //Falta validar que los datos digitados sean validos
+    const errResol = document.querySelector('.invalid-feedback');
+
     button.addEventListener('click', (e) => {
+        e.preventDefault();
         const res = resolucion.value;
+        if (res == '') {
+            errResol.classList.add('visible');
+            return;
+        }else{
+            errResol.classList.remove('visible');
+        }
         const vig = vigencia.options[vigencia.selectedIndex].text;
         const api = `http://css-sas.com/api/router.php/resoluciones/2va/${res}/${vig}`;
         
-        e.preventDefault();
         fetch(api).then((response) => {
             return response.json();
         }).then((data) => {
@@ -238,7 +251,7 @@ body {
                                 <div>${result.fecharesol}</div>
                             </div>
                             <div class="archivo">
-                                <div><a href="${result.archivo}">Ver Archivo</a></div>
+                                <div><a href="${result.archivo}" target="_blank">Ver Archivo</a></div>
                             </div>
                         </div>`,
                     showCloseButton: true,
