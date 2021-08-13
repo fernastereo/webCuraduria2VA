@@ -221,7 +221,7 @@ body {
             errResol.classList.remove('visible');
         }
         const vig = vigencia.options[vigencia.selectedIndex].text;
-        const api = `http://css-sas.com/api/router.php/resolucion/2va/${res}/${vig}`;
+        const api = `http://css-sas.com/apicuradurias/api/router.php/resolucion/2va/${res}/${vig}`;
         
         fetch(api).then((response) => {
             return response.json();
