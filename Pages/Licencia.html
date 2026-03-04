@@ -1,0 +1,163 @@
+
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs-custom-inset">
+            <div class="breadcrumbs-custom context-dark bg-overlay-60">
+                <div class="container">
+                    <h2 class="breadcrumbs-custom-title">Consultas</h2>
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="active">Listado de Resoluciones</li>
+                    </ul>
+                </div>
+                <div class="box-position" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
+            </div>
+        </section>
+        <!-- Base typography-->
+        <!-- HTML Text Elements-->
+        <section class="section section-sm section-first bg-default">
+            <div class="container">
+
+                <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
+                    <h4>Listado de Resoluciones</h4>
+                    <div class="row row-14 gutters-14">
+                        <br />
+                        <br />
+                        <div class="col-md-4">
+                            <div class="form-wrap">
+                                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                                    <h6>Fecha Inicial</h6>
+                                    <input type="date" class="form-control" id="fechaini">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-wrap">
+                                <h6>Fecha Final</h6>
+                                <input type="date" class="form-control" id="fechafin">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-wrap">
+                                <button id="consultar" class="button button-black-outline button-ujarak">Consultar</button>
+                                <div id="spinner" class="spinner-border text-success spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                </form>
+                <div class="row mt-4">
+                    <table class="table table-sm table-striped" style="font-size: 0.8em;">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col" style="width: 130px;">Radicación</th>
+                                <th scope="col" style="width: 300px;">Solicitante</th>
+                                <th scope="col" style="width: 290px;">Modalidad</th>
+                                <th scope="col" style="width: 85px;">Resolución</th>
+                                <th scope="col">Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body-table">
+                        </tbody>
+                    </table>
+                    <div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center page-items">
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        const button = document.querySelector('#consultar');
+        const fechaini = document.querySelector('#fechaini');
+        const fechafin = document.querySelector('#fechafin');
+        const errResol = document.querySelector('.invalid-feedback');
+        const bodyTable = document.querySelector('#body-table');
+        const pageItems = document.querySelector('.page-items');
+        let recordIni = 0;
+        let elements = 15;
+
+
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const fini = fechaini.value;
+            const ffin = fechafin.value;
+
+            const api = `http://css-sas.com/apicuradurias/api/router.php/resoluciones/2va/${fini}/${ffin}`;
+
+            fetch(api).then((response) => {
+                return response.json();
+            }).then((data) => {
+                if (data.response == 'success') {
+                    const result = data;
+
+                    bodyTable.innerHTML = showRecords(recordIni, elements, result.data);
+                    pageItems.innerHTML = paginate(result.data.length, elements);
+
+                    const buttonPage = document.querySelectorAll('.page-link');
+                    buttonPage.forEach(btn => {
+                        btn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            recordIni = parseInt(e.target.innerText) - 1;
+                            recordIni = (recordIni * elements);
+
+                            bodyTable.innerHTML = showRecords(recordIni, elements, result.data);
+                        });
+                    })
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message,
+                        confirmButtonText:
+                            'Cerrar ventana'
+                    });
+                }
+            }).catch(function (err) {
+                // There was an error
+                console.warn('Something went wrong.', err);
+            });
+        })
+
+        const showRecords = (ini, elems, arrResult) => {
+            let line = '';
+            let index = ini;
+
+            for (let i = 0; i < elems; i++) {
+                const element = arrResult[index];
+                line += `
+                <tr>
+                    <th scope="row">${index + 1}</th>
+                    <td>${element.radicacion}</td>
+                    <td>${element.solicitante}</td>
+                    <td>${element.modalidad}</td>
+                    <td><a href="${element.archivo}" target="_blank">${element.resolucion}</a></td>
+                    <td>${element.fecharesol}</td>
+                </tr>
+                `
+                index++;
+                if (index == arrResult.length) {
+                    return line;
+                }
+            }
+
+            return line;
+        }
+
+        const paginate = (totalElements, elementsPerPage) => {
+            let totalPages = Math.trunc(totalElements / elementsPerPage) + 1;
+            let paginator = '';
+            for (let i = 0; i < totalPages; i++) {
+                paginator += `<li class="page-item"><a class="page-link" href="#">${i + 1}</a></li>`
+            }
+
+            return paginator;
+        }
+    </script>
