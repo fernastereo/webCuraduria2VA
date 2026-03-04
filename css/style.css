@@ -2456,6 +2456,9 @@ img {
 
 .img-circles {
 	border-radius: 50%;
+	height: 118px;
+	width: 118px;
+	object-fit: cover;
 }
 
 .figure-classic {
