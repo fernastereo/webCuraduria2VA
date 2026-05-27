@@ -10787,6 +10787,7 @@ h2.title-modern > span {
 	margin-left: auto;
 	margin-right: auto;
 	line-height: 0;
+	height: 100%;
 }
 
 .team-modern svg path {
@@ -10794,8 +10795,13 @@ h2.title-modern > span {
 }
 
 .team-modern-caption {
-	padding: 7px 14px 48px;
+	padding: 2rem 3rem;
 	background: #f7f7f7;
+}
+
+.team-modern > .team-modern-caption {
+	min-height: 55%;
+	max-height: 55%;
 }
 
 .team-modern-header {
@@ -24731,6 +24737,21 @@ img.mfp-img {
 
 .banner img {
 	width: 100%;
+}
+
+.grid-personal{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+	gap: 1rem;
+	margin-top: 3rem;
+}
+
+.grid-personal_card {
+	/* border: 1px solid blue; */
+}
+
+.grid-personal_card a {
+	font-size: 0.8rem;
 }
 
 @media (max-width: 1199.98px) {
