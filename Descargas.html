@@ -187,7 +187,7 @@
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                          <div class="unit-body"><a class="link-phone" href="tel:#">+57-605-5888428</a></div>
+                          <div class="unit-body"><a class="link-phone" href="tel:#">+57-300-4488189</a></div>
                         </div>
                       </li>
                       <li>
@@ -265,27 +265,14 @@
     <a href="https://api.whatsapp.com/send?phone=3155211626&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20curaduría%202%20de%20valledupar." class="floats" target="_blank">
       <i class="fa fa-whatsapp my-floats"></i>
       </a>
-      <script>
-        // Función para cambiar la URL sin .html
-        function cambiarURL(urlSinExtension) {
-          // Reemplazar la extensión .html con una cadena vacía
-          var nuevaURL = urlSinExtension.replace('.html', '');
-          // Modificar la URL en el historial del navegador
-          history.pushState({}, '', nuevaURL);
-        }
-      
-        // Ejemplo de uso
-        cambiarURL(window.location.href);
-        
-      </script>
-
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const apiUrl = 'https://curaduria2valledupar.com/proxyDescarga.php';
+    const apiDocumentos = '../json/descargas.json'; 
     
     // Cargar y mostrar documentos
-    fetch(apiUrl)
+    fetch(apiDocumentos)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al cargar los documentos');
@@ -351,7 +338,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-</script>
 </script>
 
 <style>
