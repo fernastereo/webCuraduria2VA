@@ -283,9 +283,10 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const apiUrl = 'https://curaduria2valledupar.com/proxyDescarga.php';
+    const apiDocumentos = '../json/descargas.json'; 
     
     // Cargar y mostrar documentos
-    fetch(apiUrl)
+    fetch(apiDocumentos)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al cargar los documentos');

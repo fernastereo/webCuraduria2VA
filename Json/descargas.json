@@ -1,0 +1,258 @@
+{
+"status": 200,
+"mensaje": "Lista de documentos",
+"data": [
+{
+"id": 8,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/decreto2218-2015.pdf",
+"Nombre_Arch": "Decreto 2218 de 2015",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 9,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/decreto1077-2015.pdf",
+"Nombre_Arch": "Decreto 1077 de 2015",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 10,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/decreto1469.pdf",
+"Nombre_Arch": "Decreto 1469 de 2010",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 11,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/resolucion-1025_2021.pdf",
+"Nombre_Arch": "Resolución 1025 de 2021",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 12,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/resolucion-1026_2021.pdf",
+"Nombre_Arch": "Resolución 1026 de 2021",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 13,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/ley388.pdf",
+"Nombre_Arch": "Ley 388 de 1997",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 14,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/ley9a.pdf",
+"Nombre_Arch": "Ley 9ª de 1989",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 15,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/potva.pdf",
+"Nombre_Arch": "Plan de Ordenamiento Territorial",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 16,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/monumentosnacionales.pdf",
+"Nombre_Arch": "Reglamento Consejo de Monumentos Nacionales",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 17,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/ley675.pdf",
+"Nombre_Arch": "Ley 675 de 2001",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 18,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/ley810.pdf",
+"Nombre_Arch": "Ley 810 de 2003",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 19,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/resolucion_0001_2024.pdf",
+"Nombre_Arch": "Resolución 0001 de 2024",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 20,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/LICENCIA_TEMPORAL.pdf",
+"Nombre_Arch": "Licencia Temporal",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 21,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/Resolucion_Numero_0003.pdf",
+"Nombre_Arch": "Resolución número 0003",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 22,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/fun.pdf",
+"Nombre_Arch": "Formulario Unico de Radicacion",
+"Tipo_Arch": "Formatos",
+"Estado": 1
+},
+{
+"id": 23,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/Fords.pdf",
+"Nombre_Arch": "Formato de declaracion de interes social",
+"Tipo_Arch": "Formatos",
+"Estado": 1
+},
+{
+"id": 24,
+"Fecha_Registro": "2025-05-20 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/declaracion.pdf",
+"Nombre_Arch": "Declaración de Antiguedad",
+"Tipo_Arch": "Formatos",
+"Estado": 1
+},
+{
+"id": 27,
+"Fecha_Registro": "2025-05-21 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/valla.ppt",
+"Nombre_Arch": "Formato de Valla del Proyecto",
+"Tipo_Arch": "Formatos",
+"Estado": 1
+},
+{
+"id": 28,
+"Fecha_Registro": "2025-05-21 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/valla2.ppt",
+"Nombre_Arch": "Formato de segunda Valla del Proyecto",
+"Tipo_Arch": "Formatos",
+"Estado": 1
+},
+{
+"id": 29,
+"Fecha_Registro": "2025-06-06 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/Anexo Resolucion Aviso Funciones IVC.pdf",
+"Nombre_Arch": "Anexo Resolucion Aviso Funciones IVC.pdf",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 30,
+"Fecha_Registro": "2025-11-13 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/2025-11-12 Comunicado Colegio Nacional de Curadores Decreto 1166.pdf",
+"Nombre_Arch": "2025-11-12 Comunicado Colegio Nacional de Curadores Decreto 1166.pdf",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 31,
+"Fecha_Registro": "2025-11-13 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/2025-11-12 Comunicado Colegio Nacional de Curadores Decreto 1166.pdf",
+"Nombre_Arch": "2025-11-12 Comunicado Colegio Nacional de Curadores Decreto 1166.pdf",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 32,
+"Fecha_Registro": "2025-11-25 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/ABC RESOLUCIÓN 0194 DE 2025.pdf",
+"Nombre_Arch": "ABC RESOLUCIÓN 0194 DE 2025.pdf",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 33,
+"Fecha_Registro": "2025-11-25 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/RES-2025-006552-6 (1).pdf",
+"Nombre_Arch": "RES-2025-006552-6 (1).pdf",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 34,
+"Fecha_Registro": "2025-11-25 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/INSTRUCCIÓN ADNINISTRATIVA  No. 000182-4 Mayo 16 de 2025 (1).pdf",
+"Nombre_Arch": "INSTRUCCIÓN ADNINISTRATIVA  No. 000182-4 Mayo 16 de 2025 (1).pdf",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 35,
+"Fecha_Registro": "2025-11-25 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/Resolucion 0194-2025.pdf",
+"Nombre_Arch": "Resolucion 0194-2025.pdf",
+"Tipo_Arch": "Normativa",
+"Estado": 1
+},
+{
+"id": 36,
+"Fecha_Registro": "2026-02-27 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/img27022026_0007.pdf",
+"Nombre_Arch": "img27022026_0007.pdf",
+"Tipo_Arch": "Formatos",
+"Estado": 1
+},
+{
+"id": 37,
+"Fecha_Registro": "2026-03-13 00:00:00",
+"Ruta_Ico": "/assets/icons/pdf-icon.png",
+"Ruta_Arch": "/PDF/FORMULARIO UNICO NACIONAL 2025.pdf",
+"Nombre_Arch": "FORMULARIO UNICO NACIONAL 2025.pdf",
+"Tipo_Arch": "Formatos",
+"Estado": 1
+}
+]
+}
